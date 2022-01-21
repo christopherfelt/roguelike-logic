@@ -1,17 +1,14 @@
-import CanvasBuilder from "./CanvasBuilder.js";
+const express = require('express');
+const app = express()
+const port = 3000
 
-function main(){
+app.use(express.static('public'))
 
+app.get('/', (req, res) => {
+    res.sendFile('index.html');
+})
 
-    var c = document.getElementById("myCanvas")
-    var ctx = c.getContext("2d");
-    
-    let cb = new CanvasBuilder(ctx);
-    // cb.buildGrid();
-    cb.buildCanvas();
-
-}
-
-main();
-
+app.listen(port, () => {
+    console.log("listening on port 3000 ....")
+})
 

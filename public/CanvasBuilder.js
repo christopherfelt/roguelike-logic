@@ -95,9 +95,9 @@ class CanvasBuilder {
         pdg.generatePathData()
         let data = pdg.getAllData();
 
-        this.buildGrid();
+        // this.buildGrid();
 
-        let compatiblityReport = pdg.getCompatibilityReport();
+        // let compatiblityReport = pdg.getCompatibilityReport();
         // this.buildConflictGrid(data, compatiblityReport);
 
         let pb = new PathBuilder(data, this.ctx);
